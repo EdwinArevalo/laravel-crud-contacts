@@ -20,4 +20,4 @@ Route::get('/', function () {
 //Route::get('/contacts', 'ContactController@index');
 //Route::get('/contacts/create', 'ContactController@create');
  
-Route::resource('contacts','ContactController');
+Route::resource('/contacts','ContactController');
