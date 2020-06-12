@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 //Route::get('/contacts', 'ContactController@index');
 //Route::get('/contacts/create', 'ContactController@create');
  
-Route::resource('/contacts','ContactController');
+Route::resource('/','ContactController');
