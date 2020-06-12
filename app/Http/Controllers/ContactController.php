@@ -41,7 +41,7 @@ class ContactController extends Controller
         $newContact = request()->except('_token');
         Contact::insert($newContact);
         //return response()->json($newContact);
-        return redirect('contacts')->with('Mensaje','Contacto agregado correctamente!');
+        return redirect('/')->with('Mensaje','Contacto agregado correctamente!');
 
     }
 
@@ -81,7 +81,7 @@ class ContactController extends Controller
         //
         $dataContact = request()->except(['_token','_method']);
         Contact::where('id','=',$id)->update($dataContact);
-        return redirect('contacts')->with('Mensaje','Contacto modificado con éxito!');
+        return redirect('/')->with('Mensaje','Contacto modificado con éxito!');
 
     }
 
@@ -94,7 +94,7 @@ class ContactController extends Controller
     public function destroy($id)
     {
         Contact::destroy($id);
-        return redirect('contacts')->with('MensajeRed','Contacto eliminado!');
+        return redirect('/')->with('MensajeRed','Contacto eliminado!');
 
     }
 }

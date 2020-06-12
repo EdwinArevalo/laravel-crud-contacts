@@ -5,7 +5,7 @@
         <div class="card-header">
             <h4>Modificar Contacto</h4>
         </div>
-<form action="{{url('/contacts/'.$contact->id)}}" class="card-body" method="post">
+<form action="{{url('/'.$contact->id)}}" class="card-body" method="post">
     {{ csrf_field() }} 
     {{ method_field('PATCH')}}
     <div class="form-group">

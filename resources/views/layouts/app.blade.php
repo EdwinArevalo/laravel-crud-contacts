@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div class="container">
-        <a class="navbar-brand" href="{{ url('/contacts') }}">
+        <a class="navbar-brand" href="{{ url('/')}}">
           <img src="/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
           <strong>Contact App</strong> 
         </a>

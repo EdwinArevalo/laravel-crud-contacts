@@ -16,7 +16,7 @@
 </div> 
 @endif
 
-<a href="{{ url('contacts/create') }}"><button type="button" class="btn btn-primary">Agregar Contacto</button>
+<a href="{{ url('/create') }}"><button type="button" class="btn btn-primary">Agregar Contacto</button>
 </a>
 <div class="mt-3"></div>
 <table class="table table-light">
@@ -37,15 +37,15 @@
                 <td>{{$loop->iteration}}</td>
                 <td>{{$contact->nombre}}</td>
                 <td>{{$contact->apellido_paterno}}</td>
-                <td>{{$contact->apellido_materno}}</dr>
+                <td>{{$contact->apellido_materno}}</td>
                 <td>{{$contact->correo}}</td>
                 <td>{{$contact->edad}}</td>
                 <td>
                     <div class="list-group list-group-horizontal-sm">
-                    <a href="{{ url('/contacts/'.$contact->id.'/edit') }}" style="margin: 2px">
+                    <a href="{{ url('/'.$contact->id.'/edit') }}" style="margin: 2px">
                         <button type="button" class="btn btn-warning">Editar</button>
                     </a>  
-                    <form method="POST" action="{{url('/contacts/'.$contact->id)}}" style="margin: 2px">
+                    <form method="POST" action="{{url('/'.$contact->id.'/')}}" style="margin: 2px">
                         {{csrf_field()}}
                         {{ method_field('DELETE')}}
                         <button type="submit" onclick="return confirm('¿Desea Borrar este Contacto?');" class="btn btn-danger">Borrar</button>

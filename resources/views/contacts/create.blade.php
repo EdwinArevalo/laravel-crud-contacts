@@ -6,7 +6,7 @@
         <div class="card-header">
             <h4>Añadir nuevo Contacto</h4>
         </div>
-<form action="{{url('/contacts')}}" class="card-body" method="post">
+<form action="{{url('/')}}" class="card-body" method="POST">
     {{ csrf_field() }}
     
     <div class="form-group">
